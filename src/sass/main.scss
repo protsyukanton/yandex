@@ -362,3 +362,85 @@ body {
         gap: 20px;
     }
 }
+
+
+/* ---------- Stage styles ---------- */
+
+.stage {
+    padding: 100px 0;
+
+    & .container {
+        position: relative;
+    }
+
+    &__image {
+        position: absolute;
+        right: -40px;
+        bottom: 0;
+        width: 100%;
+        max-width: 376px;
+    }
+
+    &-header {
+        position: relative;
+        margin-bottom: 54px;
+
+        &__subtitle {
+            position: absolute;
+            bottom: 10px;
+            left: 320px;
+            font-size: 2rem;
+            line-height: 120%;
+            color: $color-text-note;
+        }
+    }
+
+    &-cards {
+        counter-reset: stage-counter;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        &__item {
+            padding: 20px;
+            display: flex;
+            gap: 16px;
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 120%;
+            background: url('../img/stage-item-bg-light.png') no-repeat center center / cover;
+
+            &:before {
+                content: counter(stage-counter);
+                counter-increment: stage-counter;
+                width: 36px;
+                height: 36px;
+                color: var(--color-text-primary);
+                background-color: #fff;
+                border-radius: 100px;
+                font-family: var(--ff-golos);
+                font-size: 2rem;
+                line-height: 120%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+
+            &:nth-child(3) {
+                grid-row-end: span 2;
+                background: url('../img/stage-item-bg-light--big.png') no-repeat center center / cover;
+            }
+
+            :nth-child(6) {
+                background: url('../img/stage-item-bg-dark.png') no-repeat center center / cover;
+            }
+
+            &:nth-child(7) {
+                grid-column-end: span 2;
+                background: url('../img/stage-item-bg-dark--long.png') no-repeat center center / cover;
+                padding-right: 310px;
+            }
+        }
+    }
+}
