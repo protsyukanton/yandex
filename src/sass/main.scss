@@ -1,4 +1,12 @@
+/* ---------- Variables ---------- */
+$ff-golos: "Golos Text", sans-serif;
+$ff-merriweather: "Merriweather", serif;
 
+$color-text-primary: #313131;
+$color-text-accent: #F54932;
+$color-text-note: #3057A2;
+$color-button-primary: #1F1F1F;
+$color-button-secondary: #FBCE51;
 
 /* ---------- Reset styles ---------- */
 
@@ -43,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: sans-serif;
+    font-family: $ff-merriweather;
 }
 
 ul {
@@ -125,8 +133,57 @@ label {
 
 html {
     overflow-x: hidden;
+    font-size: 10px;
 }
 
 body {
     overflow-x: hidden;
+    font-family: $ff-golos;
+    color: $color-text-primary;
+}
+
+.container {
+    width: 100%;
+    max-width: 1252px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: $ff-merriweather;
+    color: $color-text-primary;
+    font-weight: 400;
+    font-size: 6rem;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+/* ---------- Header styles ---------- */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 26px 0;
+
+    &-logotype {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        &__image {
+            max-width: 92px;
+        }
+
+        &__title {
+            font-family: var(--ff-golos);
+            color: #595653;
+            font-size: 1.6rem;
+            line-height: 108%;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
 }
