@@ -187,3 +187,73 @@ body {
         }
     }
 }
+
+
+/* ---------- Hero styles ---------- */
+
+.hero {
+    padding: 110px 0 132px 0;
+    background: url('../img/hero-background.jpg') no-repeat center center / cover;
+
+    &__title {
+        &--center {
+            text-align: center;
+            display: block;
+        }
+
+        &--right {
+            text-align: right;
+            display: block;
+        }
+    }
+
+    &-inner {
+        max-width: 542px;
+    }
+
+    &__description {
+        margin: 24px 0 40px 0;
+        line-height: 130%;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    &-buttons {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid $color-button-primary;
+            width: 100%;
+            max-width: 263px;
+            height: 72px;
+            border-radius: 66px;
+            font-weight: 500;
+            padding: 0 49px;
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 130%;
+            transition: .3s;
+
+            &:hover {
+                background-color: $color-button-primary;
+                color: #fff;
+            }
+
+            &--dark {
+                background-color: $color-button-primary;
+                color: #fff;
+
+                &:hover {
+                    background-color: $color-button-secondary;
+                    border: 2px solid $color-button-secondary;
+                    color: $color-button-primary;
+                }
+            }
+        }
+    }
+}
