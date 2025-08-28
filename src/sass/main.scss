@@ -257,3 +257,21 @@ body {
         }
     }
 }
+
+
+/* ---------- Running line styles ---------- */
+
+.running-line {
+    display: flex;
+    gap: 30px;
+    padding: 18px 0;
+    background-color: $color-text-accent;
+
+    &__item {
+        font-family: $ff-merriweather;
+        font-size: 2.2rem;
+        color: #fff;
+        line-height: 110%;
+        flex-shrink: 0;
+    }
+}
